@@ -1,0 +1,5 @@
+extens/
+model/model.safetensors
+model/pytorch_model.bin
+model/venv/
+model/__pycache__
