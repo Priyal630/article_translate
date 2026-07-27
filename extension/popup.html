@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>IndicTrans Translator</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <div class="logo">IT</div>
+      <div>
+        <h1>IndicTrans Translator</h1>
+        <p class="subtitle">Local on-device translation</p>
+      </div>
+    </header>
+
+    <div class="field">
+      <label for="srcLang">From</label>
+      <select id="srcLang"></select>
+    </div>
+
+    <div class="field">
+      <label for="tgtLang">To</label>
+      <select id="tgtLang"></select>
+    </div>
+
+    <div class="actions">
+      <button id="translateBtn" class="btn btn--primary">Translate Page</button>
+      <button id="restoreBtn" class="btn btn--ghost">Restore Original</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <details class="advanced">
+      <summary>Server settings</summary>
+      <div class="field">
+        <label for="serverUrl">Server URL</label>
+        <input id="serverUrl" type="text" placeholder="http://localhost:8000" />
+      </div>
+      <div class="advanced__row">
+        <button id="saveServerBtn" class="btn btn--small">Save</button>
+        <span id="serverStatus" class="server-status"></span>
+      </div>
+    </details>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
